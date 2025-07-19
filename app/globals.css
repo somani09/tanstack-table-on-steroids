@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Core Theme Colors */
+  --color-primary: #13315c;
+  --color-secondary: #084b83;
+  --color-text: #102e4a;
+  --color-glass: #e1ecf7;
+
+  --color-accent-1: #71a5de;
+  --color-accent-2: #83b0e1;
+
+  /* Twilight Palette (Blues → Purples) */
+  --color-twilight-blue-300: #76a7f4;
+  --color-twilight-blue-400: #6b8ce6;
+  --color-twilight-blue-500: #6071d7;
+  --color-twilight-blue-violet-400: #8671e1;
+  --color-twilight-violet-500: #ab71eb;
+  --color-twilight-violet-400: #b188ef;
+  --color-twilight-violet-300: #b69ff2;
+  --color-twilight-lavender-300: #bcb6f6;
+  --color-twilight-lavender-200: #c1cdf9;
+
+  /* Mint Palette (Mints → Sky → Periwinkle) */
+  --color-mint-mint-100: #84ffc9;
+  --color-mint-teal-100: #8af2d2;
+  --color-mint-aqua-100: #91e5db;
+  --color-mint-sky-100: #97d9e4;
+  --color-mint-sky-200: #9dcced;
+  --color-mint-blue-200: #a4bff6;
+  --color-mint-periwinkle-200: #aab2ff;
+
+  /* Pastel Palette (Blue & Pink) */
+  --color-pastel-blue-100: #c9def4;
+  --color-pastel-blue-200: #d0dbef;
+  --color-pastel-blue-300: #d8d8e9;
+  --color-pastel-blue-400: #dfd5e4;
+  --color-pastel-pink-100: #e6d2df;
+  --color-pastel-pink-200: #eecfd9;
+  --color-pastel-pink-300: #f5ccd4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+@keyframes fadeOutShrink {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes fadeInSidebar {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+.animate-fade-out-shrink {
+  animation: fadeOutShrink 0.3s ease-in-out forwards;
+}
+
+.animate-fade-in-sidebar {
+  animation: fadeInSidebar 0.4s ease-out forwards;
+}
