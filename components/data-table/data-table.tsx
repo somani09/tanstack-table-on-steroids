@@ -305,7 +305,10 @@ const DataTable = <TData extends RowData, THeaderTooltip = string>(
       sensors={sensors}
     >
       <div
-        className={cn("relative h-fit w-full overflow-x-auto", className)}
+        className={cn(
+          "scrollbar relative h-fit w-full overflow-x-auto",
+          className,
+        )}
         aria-label={`${tableName}-metrics-table`}
         data-testid={`${tableName}-metrics-table`}
       >

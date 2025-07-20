@@ -113,7 +113,7 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: #cac7fe; /* Scrollbar color */
+  background: #13315c; /* Scrollbar color */
   border-radius: 10px;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .v-scrollbar::-webkit-scrollbar-thumb {
-  background: #cac7fe;
+  background: #13315c;
   border-radius: 10px;
 }
 
