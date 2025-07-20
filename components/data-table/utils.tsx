@@ -290,9 +290,11 @@ const FooterCell: React.FC<FooterCellProps> = ({
   sum,
   avg,
   justifyContent,
+  footerClasses,
 }) => {
   const baseDivClasses = cn(
-    "no-scrollbar flex w-full flex-row items-center overflow-hidden text-ellipsis whitespace-nowrap px-4 py-2 text-center h-12 bg-mm-primary-50  text-base font-semibold",
+    "no-scrollbar flex w-full flex-row items-center overflow-hidden text-ellipsis whitespace-nowrap px-4 py-2 text-center h-12 bg-soft-peach-300 text-base font-semibold",
+    footerClasses,
     `justify-${justifyContent || "start"}`,
   );
 

@@ -12,7 +12,7 @@ export const TABLE_STYLE_PRESETS: TableStyleConfig[] = [
     },
     FOOTER_CLASSES: {
       height: "h-12",
-      background: "bg-soft-cream-200",
+      background: "bg-soft-peach-300",
       fontColor: "text-secondary",
       fontSize: "text-base",
       fontWeight: "font-semibold",

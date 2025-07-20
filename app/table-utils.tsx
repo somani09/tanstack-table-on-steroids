@@ -2,6 +2,7 @@ import {
   CustomColumnMeta,
   DataType,
   RowData,
+  TableStyleConfig,
 } from "@/components/data-table/types-and-interfaces";
 import { columnSchema } from "./schema";
 import { CellContext, ColumnDef } from "@tanstack/table-core";
@@ -31,6 +32,7 @@ export const createColumnDefs = (
   columns: readonly (typeof columnSchema)[number]["key"][],
   noOfConstLengthColumns: number,
   noOfConstLengthColumnsWidth = 80,
+  colorSchema?: TableStyleConfig,
 ): ColumnDef<RowData, unknown>[] => {
   const noOfColumns = columns.length;
 
@@ -85,6 +87,7 @@ export const createColumnDefs = (
 
         return (
           <FooterCell
+            footerClasses={colorSchema?.FOOTER_CLASSES.background}
             sum={simpleFormatter(sum, config.dataType)}
             avg={simpleFormatter(avg, config.dataType)}
             justifyContent={config.justify}
