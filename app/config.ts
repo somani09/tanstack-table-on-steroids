@@ -1,7 +1,7 @@
 export const pageConfig = {
-  title: "Page Title",
+  title: "Tanstack Table On steroids",
   description:
-    "Consequat esse labore dolore voluptate duis magna voluptate labore sint esse.Exercitation commodo consequat deserunt ex aute Lorem voluptate.",
+    "A fully interactive and customizable data table built with TanStack Table v8 and @dnd-kit. It supports advanced features like column pinning, drag-and-drop reordering, live resizing, and row selection—all controlled via modular state. Designed to mimic spreadsheet-like workflows with a modern UI and accessible UX. Ideal for both client-side dashboards and complex data-heavy interfaces.",
   infoSections: [
     {
       title: "Why We Built This",
