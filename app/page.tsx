@@ -15,6 +15,7 @@ import { columnsWithCheckbox } from "@/components/data-table/utils";
 import { TABLE_STYLE_PRESETS } from "@/components/data-table/color-schema";
 import { columnSchema, employeeData } from "./schema";
 import { createColumnDefs } from "./table-utils";
+import InfoPanel from "./info-panel";
 
 const selectedKeys = columnSchema.map((col) => col.key);
 const noOfConstLengthColumns = columnSchema.filter(
@@ -133,7 +134,7 @@ const Home = () => {
 
       <div className="bg-accent-1 mt-8 mb-8 h-0.5 max-w-48 rounded-full" />
 
-      <div className="flex w-full flex-1 flex-col gap-6 lg:flex-row">
+      <div className="flex w-full flex-1 flex-col gap-6">
         <div className="relative flex h-fit w-fit max-w-full flex-col">
           <DataTable
             tableName="sample-table"
@@ -155,6 +156,7 @@ const Home = () => {
             defaultPinnedColumns={["select"]}
           />
         </div>
+        <InfoPanel />
       </div>
     </div>
   );
